@@ -1,0 +1,13 @@
+﻿patch:
+  "switches/@0/reset": 0
+  "switches/@2/reset": 1
+  "switches/@next":
+    name: emoji_suggestion
+    reset: 1
+    states: ["無繪文字", "有繪文字"]
+  "engine/filters/@before 0": "simplifier@emoji_suggestion"
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: none
+    inherit_comment: false

@@ -1,0 +1,11 @@
+﻿customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Wed Mar 11 18:00:50 2026"
+  rime_version: 1.13.1
+patch:
+  schema_list:
+    - {schema: bopomofo_tw}
+    - {schema: kaomoji}
+  "switches/@simplification/reset": 1
