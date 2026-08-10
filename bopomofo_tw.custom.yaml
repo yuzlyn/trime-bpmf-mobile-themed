@@ -1,11 +1,15 @@
 ﻿patch:
   "switches/@0/reset": 0
-  "switches/@2/reset": 2
+  "switches/@2/options": [zh_hans, zh_hant_tw]
+  "switches/@2/reset": 0
+  "switches/@2/states": ["简化字", "臺灣字形"]
   "switches/@next":
     name: emoji_suggestion
     reset: 1
     states: ["無繪文字", "有繪文字"]
   "engine/filters/@before 0": "simplifier@emoji_suggestion"
+  "key_binder/bindings/@24": {accept: "Control+Shift+4", toggle: zh_hant_tw, when: always}
+  "key_binder/bindings/@29": {accept: "Control+Shift+dollar", toggle: zh_hant_tw, when: always}
   recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z_]+)$"
   emoji_suggestion:
     opencc_config: emoji.json
