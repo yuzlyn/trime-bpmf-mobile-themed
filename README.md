@@ -1,6 +1,6 @@
 # window-rime-bpmf
 
-小狼毫 / Rime 的注音台湾正体配置，基于内置 `bopomofo_tw` 方案，额外加入 emoji 候选和 kaomoji 颜文字方案。
+小狼毫 / Rime 的注音台湾正体配置，基于内置 `bopomofo_tw` 方案，额外加入 emoji 候选和 kaomoji 颜文字。
 
 > 说明：仓库名使用 `bpmf`，但当前小狼毫内置方案 ID 是 `bopomofo_tw`。因此补丁文件必须命名为 `bopomofo_tw.custom.yaml`，否则重新部署后会找不到方案，表现为只能输入拉丁字母。
 
@@ -8,7 +8,7 @@
 
 - 默认启用 `bopomofo_tw`
 - 为 `bopomofo_tw` 增加 emoji 候选开关
-- 加入独立 `kaomoji` 方案，可输入颜文字和常用符号
+- 在 `bopomofo_tw` 内直接用 `/vd`、`/vs` 等编码输入颜文字
 - 保留小狼毫外观补丁 `weasel.custom.yaml`
 
 ## 安装
@@ -39,29 +39,29 @@
 
 ### 颜文字
 
-按 ``Ctrl + ` `` 或 `F4` 打开方案菜单，切换到 `kaomoji`。
+不用切换方案，在 `bopomofo_tw` 中直接输入 `/` 加编码即可。
 
 常用编码：
 
 ```text
-va   动作/态度类
-vd   可爱/哭笑类
-vs   杂项表情
-vz   姿势类
-all  全部候选
+/va    动作/态度类
+/vd    可爱/哭笑类
+/vs    杂项表情
+/vz    姿势类
+/kao   全部候选
 ```
 
 示例：
 
 ```text
-vd -> ≧▽≦ / 〒▽〒 / ＞﹏＜
-vs -> (´･ω･`) / (つД`) / ヽ(ﾟ∀ﾟ*)ﾉ
+/vd -> ≧▽≦ / 〒▽〒 / ＞﹏＜
+/vs -> (´･ω･`) / (つД`) / ヽ(ﾟ∀ﾟ*)ﾉ
 ```
 
 ## 文件说明
 
-- `default.custom.yaml`：启用 `bopomofo_tw` 和 `kaomoji`
-- `bopomofo_tw.custom.yaml`：注音台湾正体补丁，加入 emoji 过滤器
+- `default.custom.yaml`：启用 `bopomofo_tw`
+- `bopomofo_tw.custom.yaml`：注音台湾正体补丁，加入 emoji 过滤器和颜文字符号表
 - `kaomoji.schema.yaml`：颜文字独立方案
 - `kaomoji.dict.yaml`：颜文字码表
 - `opencc/`：emoji OpenCC 转换数据
