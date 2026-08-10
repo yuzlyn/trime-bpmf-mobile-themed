@@ -1,0 +1,18 @@
+schema:
+  schema_id: kaomoji_tw
+  name: "颜文字注音词库"
+  version: "2026.08.10"
+  description: |
+    用于 bopomofo_tw 的颜文字辅助词库。
+    这个方案作为依赖存在，不需要加入方案列表。
+
+engine:
+  translators:
+    - table_translator
+
+translator:
+  dictionary: kaomoji_tw
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyz
+  delimiter: " '"
