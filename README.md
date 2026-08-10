@@ -8,7 +8,7 @@
 
 - 默认启用 `bopomofo_tw`
 - 为 `bopomofo_tw` 增加 emoji 候选开关
-- 在 `bopomofo_tw` 内直接用 `/vd`、`/vs` 等符号编码输入颜文字
+- 在 `bopomofo_tw` 内直接用 `/happy`、`/sad` 等符号编码输入颜文字
 - 保留小狼毫外观补丁 `weasel.custom.yaml`
 
 ## 安装
@@ -44,18 +44,23 @@
 常用编码：
 
 ```text
-/va    动作/态度类
-/vd    可爱/哭笑类
-/vs    杂项表情
-/vz    姿势类
-/kao   全部候选
+/happy      开心
+/sad        难过
+/angry      生气
+/shy        害羞
+/surprise   惊讶
+/shrug      摊手
+/tableflip  掀桌
+/sleep      躺平
+/all        常用合集
+/kao        全部原始候选
 ```
 
 示例：
 
 ```text
-/vd -> ≧▽≦ / 〒▽〒 / ＞﹏＜
-/vs -> (´･ω･`) / (つД`) / ヽ(ﾟ∀ﾟ*)ﾉ
+/happy -> ≧▽≦ / ヽ(ﾟ∀ﾟ*)ﾉ / ～(￣▽￣～)(～￣▽￣)～
+/sad -> 〒▽〒 / ┬＿┬ / ＞﹏＜
 ```
 
 ## 文件说明
