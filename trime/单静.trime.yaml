@@ -40,7 +40,7 @@ conf:
 
 style:
   __include: trime:/style
-  color_scheme: fira_light #默认配色方案
+  color_scheme: google_white #默认配色方案
   horizontal: true #水平模式。改变方向键的功能 （true：方向键适配横排候选；false：方向键适配竖排候选）
   reset_ascii_mode: false #显示键盘时重置为中文状态
   inline_preedit: false #关闭应用输入框内嵌预编辑，避免多字缩小和末尾光标方框
@@ -383,20 +383,20 @@ preset_color_schemes:
   google_black:
     name: 谷歌黑 #方案名称
     author: '单单 <cxprcn@gmail.com>' #作者资讯
-    light_scheme: default
+    light_scheme: google_white
     # 悬浮窗
     # border_color: back_color #悬浮窗边框
     # label_color: hilited_text_color #标签（候选序号）
     # text_back_color: back_color #编码区背景
-    text_color: 0x6EACA8 #编码
+    text_color: 0x8AB4F8 #编码
     # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0xDDDDDD #高亮编码
+    hilited_text_color: 0xE8EAED #高亮编码
 
     # 候选栏
     # candidate_separator_color: back_color #候选分割线
-    back_color: 0x263238 #候选栏背景
+    back_color: 0x202124 #候选栏背景
     # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0xBBBBBB #提示
+    comment_text_color: 0x9AA0A6 #提示
     # hilited_candidate_back_color: back_color #高亮候选背景
     # hilited_candidate_text_color: text_color #高亮候选文字
     # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
@@ -409,39 +409,42 @@ preset_color_schemes:
     # preview_text_color: key_text_color #按键提示文字
     # key_text_color: candidate_text_color #按键文字
     # key_symbol_color: comment_text_color #按键符号
-    hilited_key_text_color: 0xFFFFFF #高亮按键文字
+    keyboard_back_color: 0x202124 #键盘背景
+    key_text_color: 0xE8EAED #按键文字
+    key_symbol_color: 0xBDC1C6 #按键符号
+    hilited_key_text_color: 0xE8EAED #高亮按键文字
     # hilited_key_symbol_color: key_symbol_color #高亮按键符号
 
     # 主键盘
-    main_back_color: danjing.google_black/key.png #按键背景 ※
-    hilited_main_back_color: danjing.google_black/hilited_key.png #高亮按键背景 ※
-    space_back_color: danjing.google_black/space.png #空格背景 ※
-    hilited_space_back_color: danjing.google_black/hilited_space.png #高亮空格背景 ※
-    off_key_back_color: danjing.google_black/off_key.png #功能键背景
-    # off_key_text_color: key_text_color #功能键文字
-    # off_key_symbol_color: off_key_text_color #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: danjing.google_black/hilited_off_key.png #高亮功能键背景
+    main_back_color: 0x303134 #按键背景 ※
+    hilited_main_back_color: 0x3C4043 #高亮按键背景 ※
+    space_back_color: 0x303134 #空格背景 ※
+    hilited_space_back_color: 0x3C4043 #高亮空格背景 ※
+    off_key_back_color: 0x3C4043 #功能键背景
+    off_key_text_color: 0xE8EAED #功能键文字
+    off_key_symbol_color: 0xBDC1C6 #功能键符号 高亮功能键符号※
+    hilited_off_key_back_color: 0x5F6368 #高亮功能键背景
     hilited_off_key_text_color: 0xFFFFFF #高亮功能键文字
-    on_key_back_color: danjing.google_black/shift.png #shift锁定时背景
-    # on_key_text_color: hilited_key_text_color #shift锁定时文字
-    hilited_on_key_back_color: danjing.google_black/hilited_shift.png #高亮shift锁定时背景
-    # hilited_on_key_text_color: on_key_text_color #高亮shift锁定时文字
-    # enter_back_color: on_key_back_color #enter背景 ※
-    # enter_text_color: on_key_text_color #enter文字 高亮enter文字※
-    # enter_symbol_color: enter_text_color #enter符号 高亮enter符号※
-    # hilited_enter_back_color: hilited_on_key_back_color #高亮enter背景 ※
+    on_key_back_color: 0x5F6368 #shift锁定时背景
+    on_key_text_color: 0xFFFFFF #shift锁定时文字
+    hilited_on_key_back_color: 0x8AB4F8 #高亮shift锁定时背景
+    hilited_on_key_text_color: 0x202124 #高亮shift锁定时文字
+    enter_back_color: 0x8AB4F8 #enter背景 ※
+    enter_text_color: 0x202124 #enter文字 高亮enter文字※
+    enter_symbol_color: 0x202124 #enter符号 高亮enter符号※
+    hilited_enter_back_color: 0xAECBFA #高亮enter背景 ※
 
     # 附键盘
-    key_back_color: 0x404A50 #按键背景
-    hilited_key_back_color: 0x596367 #高亮按键背景
-    off_sym_back_color: 0x313C42 #功能键背景 ※
+    key_back_color: 0x303134 #按键背景
+    hilited_key_back_color: 0x3C4043 #高亮按键背景
+    off_sym_back_color: 0x3C4043 #功能键背景 ※
     # off_sym_text_color: off_key_text_color #功能键文字 ※
     # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0x596367 #高亮功能键背景 ※
+    hilited_off_sym_back_color: 0x5F6368 #高亮功能键背景 ※
     # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x6EACA8 # enter背景 ※
+    enter_sym_back_color: 0x8AB4F8 # enter背景 ※
     # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0x26A69A #高亮enter背景 ※
+    hilited_enter_sym_back_color: 0xAECBFA #高亮enter背景 ※
     # menu_back_color: off_sym_back_color #菜单背景 ※
     # menu_text_color: off_sym_text_color #菜单文字 ※
     # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
@@ -455,15 +458,15 @@ preset_color_schemes:
     # border_color: back_color #悬浮窗边框
     # label_color: hilited_text_color #标签（候选序号）
     # text_back_color: back_color #编码区背景
-    text_color: 0x5CB5AB #编码
+    text_color: 0x1A73E8 #编码
     # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0x627178 #高亮编码
+    hilited_text_color: 0x3C4043 #高亮编码
 
     # 候选栏
     # candidate_separator_color: back_color #候选分割线
-    back_color: 0xECEFF1 #候选栏背景
+    back_color: 0xF1F3F4 #候选栏背景
     # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0x808080 #提示
+    comment_text_color: 0x5F6368 #提示
     # hilited_candidate_back_color: back_color #高亮候选背景
     hilited_candidate_text_color: 0x333333 #高亮候选文字
     # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
@@ -475,40 +478,42 @@ preset_color_schemes:
     # preview_back_color: back_color #按键提示背景
     # preview_text_color: key_text_color #按键提示文字
     # key_text_color: candidate_text_color #按键文字
-    key_symbol_color: 0x627178 #按键符号
-    hilited_key_text_color: 0x333333 #高亮按键文字
+    keyboard_back_color: 0xF1F3F4 #键盘背景
+    key_text_color: 0x202124 #按键文字
+    key_symbol_color: 0x5F6368 #按键符号
+    hilited_key_text_color: 0x202124 #高亮按键文字
     # hilited_key_symbol_color: key_symbol_color #高亮按键符号
 
     # 主键盘
-    main_back_color: danjing.google_white/key.png #按键背景 ※
-    hilited_main_back_color: danjing.google_white/hilited_key.png #高亮按键背景 ※
-    space_back_color: danjing.google_white/space.png #空格背景 ※
-    hilited_space_back_color: danjing.google_white/hilited_space.png #高亮空格背景 ※
-    off_key_back_color: danjing.google_white/off_key.png #功能键背景
-    # off_key_text_color: key_text_color #功能键文字
-    # off_key_symbol_color: off_key_text_color #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: danjing.google_white/hilited_off_key.png #高亮功能键背景
-    # hilited_off_key_text_color: off_key_text_color #高亮功能键文字
-    on_key_back_color: danjing.google_white/shift.png #shift锁定时背景
+    main_back_color: 0xFFFFFF #按键背景 ※
+    hilited_main_back_color: 0xE8EAED #高亮按键背景 ※
+    space_back_color: 0xFFFFFF #空格背景 ※
+    hilited_space_back_color: 0xE8EAED #高亮空格背景 ※
+    off_key_back_color: 0xDADCE0 #功能键背景
+    off_key_text_color: 0x202124 #功能键文字
+    off_key_symbol_color: 0x5F6368 #功能键符号 高亮功能键符号※
+    hilited_off_key_back_color: 0xBDC1C6 #高亮功能键背景
+    hilited_off_key_text_color: 0x202124 #高亮功能键文字
+    on_key_back_color: 0x1A73E8 #shift锁定时背景
     on_key_text_color: 0xFFFFFF #shift锁定时文字
-    hilited_on_key_back_color: danjing.google_white/hilited_shift.png #高亮shift锁定时背景
-    # hilited_on_key_text_color: on_key_text_color #高亮shift锁定时文字
-    # enter_back_color: on_key_back_color #enter背景 ※
-    # enter_text_color: on_key_text_color #enter文字 高亮enter文字※
-    # enter_symbol_color: enter_text_color #enter符号 高亮enter符号※
-    # hilited_enter_back_color: hilited_on_key_back_color #高亮enter背景 ※
+    hilited_on_key_back_color: 0x185ABC #高亮shift锁定时背景
+    hilited_on_key_text_color: 0xFFFFFF #高亮shift锁定时文字
+    enter_back_color: 0x1A73E8 #enter背景 ※
+    enter_text_color: 0xFFFFFF #enter文字 高亮enter文字※
+    enter_symbol_color: 0xFFFFFF #enter符号 高亮enter符号※
+    hilited_enter_back_color: 0x185ABC #高亮enter背景 ※
 
     # 附键盘
-    key_back_color: 0xFBFBFC #按键背景
-    hilited_key_back_color: 0xD9DBDD #高亮按键背景
-    off_sym_back_color: 0xECEFF1 #功能键背景 ※
+    key_back_color: 0xFFFFFF #按键背景
+    hilited_key_back_color: 0xE8EAED #高亮按键背景
+    off_sym_back_color: 0xDADCE0 #功能键背景 ※
     # off_sym_text_color: off_key_text_color #功能键文字 ※
     # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0xD3D6D8 #高亮功能键背景 ※
+    hilited_off_sym_back_color: 0xBDC1C6 #高亮功能键背景 ※
     # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x5CB5AB # enter背景 ※
+    enter_sym_back_color: 0x1A73E8 # enter背景 ※
     # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0x00A39C #高亮enter背景 ※
+    hilited_enter_sym_back_color: 0x185ABC #高亮enter背景 ※
     # menu_back_color: off_sym_back_color #菜单背景 ※
     # menu_text_color: off_sym_text_color #菜单文字 ※
     # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
