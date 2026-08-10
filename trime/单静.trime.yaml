@@ -25,7 +25,7 @@ conf:
     height: 60 #按键高度
     key_press_offset_x: 2
     key_press_offset_y: 2
-    round_corner: 0
+    round_corner: 20
     keys/+:
       - width: 0 #底部留白开关
         height: 1 #底部留白
@@ -40,70 +40,63 @@ conf:
 
 style:
   __include: trime:/style
-  color_scheme: default #默认配色方案
+  color_scheme: fira_light #默认配色方案
   horizontal: true #水平模式。改变方向键的功能 （true：方向键适配横排候选；false：方向键适配竖排候选）
   reset_ascii_mode: false #显示键盘时重置为中文状态
+  inline_preedit: false #关闭应用输入框内嵌预编辑，避免多字缩小和末尾光标方框
+  preedit_style: composition #预编辑窗口显示注音编码
   speech_opencc_config: s2t.json #语音输入简繁转换
   auto_caps: false #自动句首大写:true|false|ascii
   latin_locale: en_US #西文语言
   locale: zh_TW #预设语言 zh_TW,zh_CN,zh_HK,""
   background_dim_amount: 0.5 #备用参数，无功能
+  root_background: keyboard_back_color #整个键盘区和候选栏背景
   keyboards: #键盘配置：自动键盘、字母、数字、符号
-    __include: danjing:/keyboards
-    __append:
-      - bopomofo_tw
-      - number
-      - symbols
-      - func
-      - edit
+    - bopomofo_tw
+    - english
+    - number
+    - symbols
+    - func
+    - edit
 
   # 候选区
   ## 候选
   candidate_use_cursor: true #高亮候选项
-  candidate_view_height: 33 #候选区高度
-  candidate_padding: 5 #候选项内边距
-  candidate_spacing: 0.5 #候选间距
-  candidate_font: han.ttf #候选字型
+  candidate_view_height: 24 #候选区高度
+  candidate_padding: 10 #候选项内边距
+  candidate_spacing: 0 #候选间距
   candidate_text_size: 20 #候选字号
   ## 编码
   comment_on_top: false #编码提示在上方或右侧
-  comment_height: 15 #编码提示区高度
-  comment_font: comment.ttf #编码提示字型
-  comment_text_size: 12 #编码提示字号
+  comment_height: 25 #编码提示区高度
+  comment_text_size: 7 #编码提示字号
 
   # 按键区
   proximity_correction: true #按键纠错
   vertical_correction: -5 #按键偏移（上偏为正）
-  horizontal_gap: 0 #键水平间距
-  vertical_gap: 0 #键盘行距
+  horizontal_gap: 4 #键水平间距
+  vertical_gap: 8 #键盘行距
   ## 主按键
   key_height: { __include: conf/sym_height } #键高
   key_width: 10.0 #键宽，占屏幕宽的百分比
-  round_corner: 1 #按键圆角半径
+  round_corner: 20 #按键圆角半径
   shadow_radius: 0.0 #按键阴影半径
-  key_font: symbol.ttf #键盘字型
-  latin_font: latin.ttf #西文字型
-  hanb_font: hanb.ttf #扩充字型
-  key_text_size: 20 #键字号
+  key_text_size: 24 #键字号
   key_long_text_size: 16 #长标签字号
-  symbol_font: symbol.ttf #符号字型
   symbol_text_size: 10 #符号字号
   ## 按键提示
-  preview_height: 44 #按键提示高度
-  preview_offset: -10 #按键提示纵向偏移（下偏为正）
-  preview_font: latin.ttf #按键提示字型
-  preview_text_size: 36 #按键提示字号
+  preview_height: 56 #按键提示高度
+  preview_offset: -32 #按键提示纵向偏移（下偏为正）
+  preview_text_size: 40 #按键提示字号
 
   # 悬浮窗口
-  label_font: label.ttf #标签字型
-  label_text_size: 19 #标签字号
+  label_text_size: 22 #标签字号
   #text_height: 22 #编码区高度
-  text_font: latin.ttf #编码字型
-  text_size: 16 #编码区字号
+  text_size: 22 #编码区字号
 
   window: #悬浮窗口组件
     #- {start: "", move: 'ㄓ ', end: ""}
-    - { start: ' ', composition: '%s', end: ' ', letter_spacing: 0 } #letter_spacing需要>=Android5.0。TODO: 不为0时，会导致不换行的问题
+    - { start: '', composition: '%s', end: '', letter_spacing: 0 } #letter_spacing需要>=Android5.0。TODO: 不为0时，会导致不换行的问题
     - {
         start: "\n",
         label: '%s.',
@@ -116,25 +109,25 @@ style:
     # 整体样式
     position: fixed #位置：left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left、right需要>=Android5.0)
     movable: false #是否可移动窗口，或仅移动一次 true|false|once
-    real_margin: 0 #屏幕左右边缘和悬浮窗之间的距离
-    spacing: -1 #屏幕上下边缘或预编辑上下边缘和悬浮窗之间的距离
-    margin_x: 5 #水平边距
-    margin_y: 1 #竖直边距
+    real_margin: 5 #屏幕左右边缘和悬浮窗之间的距离
+    spacing: 5 #屏幕上下边缘或预编辑上下边缘和悬浮窗之间的距离
+    margin_x: 10 #水平边距
+    margin_y: 5 #竖直边距
     border: 0 #边框宽度
-    round_corner: 2 #窗口圆角
+    round_corner: 15 #窗口圆角
     elevation: 0 #阴影(>=Android5.0)
     alpha: 0xff #透明度(0-255)
     #background: background.png #颜色或者backgrounds目录下的图片文件名
     # 样式
     all_phrases: false #所有满足条件的词语都显示在窗口
     min_length: 8 #最小词长
-    max_length: 15 #超过字数则换行
+    max_length: 8 #超过字数则换行
     sticky_lines: 0 #固顶行数
     max_entries: 2 #最大词条数
-    max_width: 330 #最大宽度，超过则自动换行
+    max_width: 1000 #最大宽度，超过则自动换行
     max_height: 400 #最大高度
-    min_width: 32 #最小宽度
-    min_height: 0 #最小高度
+    min_width: 48 #最小宽度
+    min_height: 36 #最小高度
     line_spacing: 0 #候选词的行间距(px)
     line_spacing_multiplier: 1.1 #候选词的行间距(倍数)
 
@@ -204,6 +197,122 @@ fallback_colors:
   hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
 
 preset_color_schemes:
+  fira_light:
+    name: Fira Light
+    author: ChiesiMario
+    dark_scheme: fira_dark
+    back_color: 0xffe7e9eb
+    border_color: 0xff656565
+    candidate_separator_color: 0xffe7e9eb
+    candidate_text_color: 0xff656565
+    comment_text_color: 0xff5d5e5f
+    hilited_back_color: 0xffe7e9eb
+    hilited_candidate_back_color: 0xffe7e9eb
+    hilited_candidate_text_color: 0xff2472e1
+    hilited_comment_text_color: 0xff5d5e5f
+    hilited_key_back_color: 0xff2472e1
+    hilited_key_symbol_color: 0xffffffff
+    hilited_key_text_color: 0xffffffff
+    hilited_off_key_back_color: 0xff2472e1
+    hilited_off_key_text_color: 0xffffffff
+    hilited_text_color: 0xff656565
+    key_back_color: 0xffffffff
+    key_symbol_color: 0xff5d5e5f
+    key_text_color: 0xff656565
+    keyboard_back_color: 0xffe7e9eb
+    label_color: 0xff2472e1
+    off_key_back_color: 0xffcacdd3
+    off_key_text_color: 0xff5d5e5f
+    preview_back_color: 0xffcacdd3
+    preview_text_color: 0xff2472e1
+    text_color: 0xff2472e1
+    text_back_color: 0xffe7e9eb
+    main_back_color: 0xffffffff
+    hilited_main_back_color: 0xff2472e1
+    space_back_color: 0xffffffff
+    hilited_space_back_color: 0xff2472e1
+    off_key_symbol_color: 0xff5d5e5f
+    on_key_back_color: 0xff2472e1
+    on_key_text_color: 0xffffffff
+    hilited_on_key_back_color: 0xff2472e1
+    hilited_on_key_text_color: 0xffffffff
+    enter_back_color: 0xff2472e1
+    enter_text_color: 0xffffffff
+    enter_symbol_color: 0xffffffff
+    hilited_enter_back_color: 0xff2472e1
+    key_border_color: 0xffe7e9eb
+    shadow_color: 0xffe7e9eb
+    off_sym_back_color: 0xffcacdd3
+    off_sym_text_color: 0xff5d5e5f
+    off_sym_fy_text_color: 0xffffffff
+    hilited_off_sym_back_color: 0xff2472e1
+    hilited_off_sym_text_color: 0xffffffff
+    enter_sym_back_color: 0xff2472e1
+    enter_sym_text_color: 0xffffffff
+    hilited_enter_sym_back_color: 0xff2472e1
+    menu_back_color: 0xffcacdd3
+    menu_text_color: 0xff5d5e5f
+    hilited_menu_back_color: 0xffffffff
+    hilited_menu_text_color: 0xff2472e1
+
+  fira_dark:
+    name: Fira Dark
+    author: ChiesiMario
+    light_scheme: fira_light
+    back_color: 0xff000000
+    border_color: 0xffF1F1F1
+    candidate_separator_color: 0xff000000
+    candidate_text_color: 0xffF1F1F1
+    comment_text_color: 0xffB6B6B6
+    hilited_back_color: 0xff000000
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xff2472e1
+    hilited_comment_text_color: 0xffB6B6B6
+    hilited_key_back_color: 0xff2472e1
+    hilited_key_symbol_color: 0xff000000
+    hilited_key_text_color: 0xff000000
+    hilited_off_key_back_color: 0xff2472e1
+    hilited_off_key_text_color: 0xff000000
+    hilited_text_color: 0xffF1F1F1
+    key_back_color: 0xff393c3f
+    key_symbol_color: 0xffB6B6B6
+    key_text_color: 0xffF1F1F1
+    keyboard_back_color: 0xff000000
+    label_color: 0xff2472e1
+    off_key_back_color: 0xff676767
+    off_key_text_color: 0xffB6B6B6
+    preview_back_color: 0xff676767
+    preview_text_color: 0xff2472e1
+    text_color: 0xff2472e1
+    text_back_color: 0xff000000
+    main_back_color: 0xff393c3f
+    hilited_main_back_color: 0xff2472e1
+    space_back_color: 0xff393c3f
+    hilited_space_back_color: 0xff2472e1
+    off_key_symbol_color: 0xffB6B6B6
+    on_key_back_color: 0xff2472e1
+    on_key_text_color: 0xff000000
+    hilited_on_key_back_color: 0xff2472e1
+    hilited_on_key_text_color: 0xff000000
+    enter_back_color: 0xff2472e1
+    enter_text_color: 0xff000000
+    enter_symbol_color: 0xff000000
+    hilited_enter_back_color: 0xff2472e1
+    key_border_color: 0xff000000
+    shadow_color: 0xff000000
+    off_sym_back_color: 0xff676767
+    off_sym_text_color: 0xffB6B6B6
+    off_sym_fy_text_color: 0xff000000
+    hilited_off_sym_back_color: 0xff2472e1
+    hilited_off_sym_text_color: 0xff000000
+    enter_sym_back_color: 0xff2472e1
+    enter_sym_text_color: 0xff000000
+    hilited_enter_sym_back_color: 0xff2472e1
+    menu_back_color: 0xff676767
+    menu_text_color: 0xffB6B6B6
+    hilited_menu_back_color: 0xff393c3f
+    hilited_menu_text_color: 0xff2472e1
+
   default:
     name: 默认 #方案名称
     author: '单单 <cxprcn@gmail.com>' #作者资讯
@@ -551,7 +660,7 @@ preset_keyboards:
       - { click: Keyboard_number, long_click: Menu, composing: Page_Up, width: 14, __include: styl/off_key, __patch: conf/key_height_last }
       - { click: Keyboard_symbols, long_click: Color_switch, composing: Page_Down, width: 10, __include: styl/off_key, __patch: conf/key_height_last }
       - { click: bpmf_comma, long_click: bpmf_period, width: 10, __include: styl/off_key, __patch: conf/key_height_last }
-      - { click: space, label: '注音', long_click: Mode_switch_space, double_click: bpmf_period, key_symbol_offset_x: 0, width: 30, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color, __patch: conf/key_height_last }
+      - { click: space, label: '注音', long_click: Keyboard_english, double_click: bpmf_period, key_symbol_offset_x: 0, width: 30, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color, __patch: conf/key_height_last }
       - { click: '-', label: 'ㄦ', width: 10, __include: styl/key }
       - { click: BS, swipe_up: Escape, width: 12, __include: styl/off_key, __patch: conf/key_height_last }
       - { click: Return, long_click: kb_func, width: 14, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color, key_symbol_color: enter_symbol_color, hilited_key_symbol_color: enter_symbol_color, key_symbol_offset_x: 0, __patch: conf/key_height_last }
@@ -567,6 +676,66 @@ preset_keyboards:
 
   qwerty_:
     __include: preset_keyboards/bopomofo_tw
+
+  english:
+    name: English
+    author: 'ChiesiMario style, adapted for mobile QWERTY'
+    ascii_mode: 1
+    lock: true
+    width: 10
+    __patch: conf/main
+    keys:
+      # 数字列
+      - { click: bpmf_sym_1, label: '1', width: 10, __include: styl/key }
+      - { click: bpmf_sym_2, label: '2', width: 10, __include: styl/key }
+      - { click: bpmf_sym_3, label: '3', width: 10, __include: styl/key }
+      - { click: bpmf_sym_4, label: '4', width: 10, __include: styl/key }
+      - { click: bpmf_sym_5, label: '5', width: 10, __include: styl/key }
+      - { click: bpmf_sym_6, label: '6', width: 10, __include: styl/key }
+      - { click: bpmf_sym_7, label: '7', width: 10, __include: styl/key }
+      - { click: bpmf_sym_8, label: '8', width: 10, __include: styl/key }
+      - { click: bpmf_sym_9, label: '9', width: 10, __include: styl/key }
+      - { click: bpmf_sym_0, label: '0', width: 10, __include: styl/key }
+      # QWERTY 第一列
+      - { click: q, long_click: bpmf_sym_percent, width: 10, __include: styl/key }
+      - { click: w, long_click: bpmf_sym_backslash, width: 10, __include: styl/key }
+      - { click: e, long_click: bpmf_sym_apostrophe, width: 10, __include: styl/key }
+      - { click: r, long_click: bpmf_sym_equal, width: 10, __include: styl/key }
+      - { click: t, long_click: bpmf_sym_lbracket, width: 10, __include: styl/key }
+      - { click: y, long_click: bpmf_sym_rbracket, width: 10, __include: styl/key }
+      - { click: u, long_click: bpmf_sym_lt, width: 10, __include: styl/key }
+      - { click: i, long_click: bpmf_sym_gt, width: 10, __include: styl/key }
+      - { click: o, long_click: bpmf_sym_lbrace, width: 10, __include: styl/key }
+      - { click: p, long_click: bpmf_sym_rbrace, width: 10, __include: styl/key }
+      # QWERTY 第二列，左右留白形成交错
+      - { width: 5 }
+      - { click: a, long_click: bpmf_sym_at, width: 10, __include: styl/key }
+      - { click: s, long_click: bpmf_sym_hash, width: 10, __include: styl/key }
+      - { click: d, long_click: bpmf_sym_dollar, width: 10, __include: styl/key }
+      - { click: f, long_click: bpmf_sym_minus, width: 10, __include: styl/key }
+      - { click: g, long_click: bpmf_sym_and, width: 10, __include: styl/key }
+      - { click: h, long_click: bpmf_sym_dash, width: 10, __include: styl/key }
+      - { click: j, long_click: bpmf_sym_plus, width: 10, __include: styl/key }
+      - { click: k, long_click: bpmf_sym_lparen, width: 10, __include: styl/key }
+      - { click: l, long_click: bpmf_sym_rparen, width: 10, __include: styl/key }
+      - { width: 5 }
+      # QWERTY 第三列
+      - { click: Shift_L, width: 15, __include: styl/off_key, __patch: conf/key_height_last }
+      - { click: z, long_click: bpmf_sym_star, width: 10, __include: styl/key }
+      - { click: x, long_click: bpmf_sym_quote, width: 10, __include: styl/key }
+      - { click: c, long_click: bpmf_sym_apostrophe, width: 10, __include: styl/key }
+      - { click: v, long_click: bpmf_sym_colon, width: 10, __include: styl/key }
+      - { click: b, long_click: bpmf_sym_semicolon, width: 10, __include: styl/key }
+      - { click: n, long_click: bpmf_sym_exclaim, width: 10, __include: styl/key }
+      - { click: m, long_click: bpmf_sym_question, width: 10, __include: styl/key }
+      - { click: BS, width: 15, __include: styl/off_key, __patch: conf/key_height_last }
+      # 空格列
+      - { click: Keyboard_number_en, long_click: Menu, width: 14, __include: styl/off_key, __patch: conf/key_height_last }
+      - { click: Keyboard_symbols, long_click: Color_switch, width: 10, __include: styl/off_key, __patch: conf/key_height_last }
+      - { click: bpmf_ascii_comma, long_click: bpmf_ascii_semicolon, width: 10, __include: styl/off_key, __patch: conf/key_height_last }
+      - { click: space_en, long_click: Keyboard_bopomofo, width: 40, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color, __patch: conf/key_height_last }
+      - { click: bpmf_ascii_period, long_click: bpmf_ascii_colon, width: 10, __include: styl/off_key, __patch: conf/key_height_last }
+      - { click: Return, width: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color, key_symbol_color: enter_symbol_color, hilited_key_symbol_color: enter_symbol_color, key_symbol_offset_x: 0, __patch: conf/key_height_last }
 
   number:
     name: 数字
@@ -711,6 +880,19 @@ preset_keys:
   bpmf_sym_equal: { label: '=', commit: '=' }
   bpmf_sym_slash: { label: '/', commit: '/' }
   bpmf_sym_tilde: { label: '~', commit: '~' }
+  bpmf_sym_backslash: { label: '\', commit: '\' }
+  bpmf_sym_apostrophe: { label: "'", commit: "'" }
+  bpmf_sym_quote: { label: '"', commit: '"' }
+  bpmf_sym_lbracket: { label: '[', commit: '[' }
+  bpmf_sym_rbracket: { label: ']', commit: ']' }
+  bpmf_sym_lbrace: { label: '{', commit: '{' }
+  bpmf_sym_rbrace: { label: '}', commit: '}' }
+  bpmf_sym_lt: { label: '<', commit: '<' }
+  bpmf_sym_gt: { label: '>', commit: '>' }
+  bpmf_ascii_comma: { label: ',', commit: ',' }
+  bpmf_ascii_period: { label: '.', commit: '.' }
+  bpmf_ascii_colon: { label: ':', commit: ':' }
+  bpmf_ascii_semicolon: { label: ';', commit: ';' }
   # 安卓
   BRIGHTNESS_DOWN: { label: 亮度-, send: BRIGHTNESS_DOWN }
   BRIGHTNESS_UP: { label: 亮度+, send: BRIGHTNESS_UP }
@@ -776,6 +958,7 @@ preset_keys:
   Hide: { label: '▼', send: BACK }
   BackSpace: { label: 退格, repeatable: true, send: BackSpace }
   space: { label: ' ', repeatable: false, functional: false, send: space }
+  space_en: { label: EN, repeatable: false, functional: false, send: space }
   Escape: { label: Esc, send: Escape }
   Tab: { label: Tab, send: Tab }
   Home: { label: Home, send: Home }
@@ -839,13 +1022,16 @@ preset_keys:
     { toggle: ascii_mode, send: Mode_switch, states: [' ', 'ascii'] }
   Keyboard_switch: { label: 键盘, send: Eisu_toggle, select: .next }
   Back: { label: 返回, send: Eisu_toggle, select: bopomofo_tw }
+  Keyboard_bopomofo: { label: '注音', send: Eisu_toggle, select: bopomofo_tw }
+  Keyboard_english: { label: EN, send: Eisu_toggle, select: english }
   Keyboard_default: { label: ' ', send: Eisu_toggle, select: bopomofo_tw }
   kb_qwerty: { label: ' ', send: Eisu_toggle, select: bopomofo_tw }
   Keyboard_letter: { label: ' ', send: Eisu_toggle, select: bopomofo_tw }
   kb_qwertys: { label: ' ', send: Eisu_toggle, select: bopomofo_tw }
   kb_qwerty_: { label: ' ', send: Eisu_toggle, select: bopomofo_tw }
   Keyboard_number: { label: '123', send: Eisu_toggle, select: number }
-  Keyboard_symbols: { label: '۞', send: Eisu_toggle, select: symbols }
+  Keyboard_number_en: { label: '?123', send: Eisu_toggle, select: number }
+  Keyboard_symbols: { label: '☺︎', send: Eisu_toggle, select: symbols }
   kb_edit: { label: '编辑', send: Eisu_toggle, select: edit }
   kb_func: { label: '❖', send: Eisu_toggle, select: func }
   # 自定义按键
