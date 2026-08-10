@@ -6,12 +6,18 @@
     reset: 1
     states: ["無繪文字", "有繪文字"]
   "engine/filters/@before 0": "simplifier@emoji_suggestion"
+  "engine/translators/@before 3": "table_translator@kaomoji_tw"
   recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z_]+)$"
   emoji_suggestion:
     opencc_config: emoji.json
     option_name: emoji_suggestion
     tips: none
     inherit_comment: false
+  kaomoji_tw:
+    dictionary: kaomoji_tw
+    enable_completion: true
+    enable_sentence: false
+    initial_quality: 1.2
   punctuator/symbols:
     /va:
       - '(￣ε(#￣)'

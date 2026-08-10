@@ -8,7 +8,8 @@
 
 - 默认启用 `bopomofo_tw`
 - 为 `bopomofo_tw` 增加 emoji 候选开关
-- 在 `bopomofo_tw` 内直接用 `/vd`、`/vs` 等编码输入颜文字
+- 在 `bopomofo_tw` 内直接按注音打“顏文字”“開心”“哭”等词来输入颜文字
+- 保留 `/vd`、`/vs` 等符号编码作为备用入口
 - 保留小狼毫外观补丁 `weasel.custom.yaml`
 
 ## 安装
@@ -39,7 +40,32 @@
 
 ### 颜文字
 
-不用切换方案，在 `bopomofo_tw` 中直接输入 `/` 加编码即可。
+不用切换方案，在 `bopomofo_tw` 中直接按注音输入这些词即可出颜文字候选：
+
+```text
+顏文字
+表情
+開心
+笑
+哭
+難過
+生氣
+害羞
+驚訝
+攤手
+無奈
+躺平
+動作
+姿勢
+```
+
+例如用注音打“開心”，候选里会出现：
+
+```text
+≧▽≦ / ヽ(ﾟ∀ﾟ*)ﾉ / ～(￣▽￣～)(～￣▽￣)～
+```
+
+也可以继续使用 `/` 加编码作为备用入口：
 
 常用编码：
 
@@ -62,6 +88,7 @@
 
 - `default.custom.yaml`：启用 `bopomofo_tw`
 - `bopomofo_tw.custom.yaml`：注音台湾正体补丁，加入 emoji 过滤器和颜文字符号表
+- `kaomoji_tw.dict.yaml`：按注音词触发的颜文字词库
 - `kaomoji.schema.yaml`：颜文字独立方案
 - `kaomoji.dict.yaml`：颜文字码表
 - `opencc/`：emoji OpenCC 转换数据

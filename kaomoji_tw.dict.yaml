@@ -1,0 +1,214 @@
+﻿# Rime dictionary - kaomoji_tw
+# encoding: utf-8
+# 注音方案内部使用拼音音节编码；在 bopomofo_tw 中按注音键位输入即可。
+---
+name: kaomoji_tw
+version: "2026.08.10"
+sort: by_weight
+...
+
+( ͡° ͜ʖ ͡°)✧	biao qing	95
+( ・ˍ・)	biao qing	95
+(#‵′)凸	biao qing	95
+(＃°Д°)	biao qing	95
+(*/ω＼*)	biao qing	95
+(´･ω･`)	biao qing	95
+(●′ω`●)	biao qing	95
+(╬ Ò ‸ Ó)	biao qing	95
+(°⌓°;	biao qing	95
+(੭ु´･ω･`)੭ु⁾⁾	biao qing	95
+(ﾟДﾟ≡ﾟдﾟ)!?	biao qing	95
+(つ。⊂)	biao qing	95
+(つД`)	biao qing	95
+∑(￣ﾛ￣||)	biao qing	95
+∑(ﾟдﾟ;)	biao qing	95
+･ﾟ･(ﾉД`;)･ﾟ	biao qing	95
+o(‵ε′)ψ	biao qing	95
+ζ*'ヮ')ζ	biao qing	95
+Σ(・ω・」)」	biao qing	95
+ლ(･ิω･ิლ)	biao qing	95
+ヽ(；▽；)ﾉ	biao qing	95
+ヽ(ﾟ∀ﾟ*)ﾉ	biao qing	95
+( ´･･)ﾉ(._.`)	biao qing	70
+( ╯-_-)╯~┴—┴	biao qing	70
+（ˉ﹃ˉ）	biao qing	70
+(￣ε(#￣)	biao qing	70
+(<ゝω·)☆~	biao qing	70
+（╬￣皿￣）＝○＃（￣＃）３￣）	biao qing	70
+（T_ T(○=(＞_＜o	biao qing	70
+／人◕‿‿◕人＼	biao qing	70
+_(:з」∠)_	biao qing	70
+～(￣▽￣～)(～￣▽￣)～	biao qing	70
+ˊ_>ˋ	biao qing	70
+ˊㅅˋ	biao qing	70
+⊙.⊙	biao qing	70
+<( ￣＾￣)>	biao qing	70
+<(￣︶￣)>	biao qing	70
+＞﹏＜	biao qing	70
+≧▽≦	biao qing	70
+╮(￣▽￣)╭	biao qing	70
+╮(╯_╰)╭	biao qing	70
+┬＿┬	biao qing	70
+┯━┯ノ('－'ノ)	biao qing	70
+╧═╧╰（`□′╰）	biao qing	70
+¬_¬	biao qing	70
+〒▽〒	biao qing	70
+m(_ _)m	biao qing	70
+o(￣ヘ￣o＃)	biao qing	70
+Θ_Θ	biao qing	70
+눈_눈	biao qing	70
+（ˉ﹃ˉ）	de yi	65
+(￣ε(#￣)	de yi	65
+<( ￣＾￣)>	de yi	65
+<(￣︶￣)>	de yi	65
+╮(￣▽￣)╭	de yi	65
+╮(╯_╰)╭	de yi	65
+o(￣ヘ￣o＃)	de yi	65
+( ´･･)ﾉ(._.`)	dong zuo	90
+( ╯-_-)╯~┴—┴	dong zuo	90
+(<ゝω·)☆~	dong zuo	90
+（╬￣皿￣）＝○＃（￣＃）３￣）	dong zuo	90
+（T_ T(○=(＞_＜o	dong zuo	90
+／人◕‿‿◕人＼	dong zuo	90
+_(:з」∠)_	dong zuo	90
+～(￣▽￣～)(～￣▽￣)～	dong zuo	90
+ˊㅅˋ	dong zuo	90
+┯━┯ノ('－'ノ)	dong zuo	90
+╧═╧╰（`□′╰）	dong zuo	90
+(*/ω＼*)	hai xiu	110
+(つ。⊂)	hai xiu	110
+ζ*'ヮ')ζ	hai xiu	110
+(ﾟДﾟ≡ﾟдﾟ)!?	jing ya	115
+∑(￣ﾛ￣||)	jing ya	115
+∑(ﾟдﾟ;)	jing ya	115
+Σ(・ω・」)」	jing ya	115
+～(￣▽￣～)(～￣▽￣)～	kai xin	120
+<(￣︶￣)>	kai xin	120
+≧▽≦	kai xin	120
+╮(￣▽￣)╭	kai xin	120
+ヽ(ﾟ∀ﾟ*)ﾉ	kai xin	120
+ˊ_>ˋ	ke ai	95
+⊙.⊙	ke ai	95
+＞﹏＜	ke ai	95
+≧▽≦	ke ai	95
+┬＿┬	ke ai	95
+¬_¬	ke ai	95
+〒▽〒	ke ai	95
+m(_ _)m	ke ai	95
+Θ_Θ	ke ai	95
+눈_눈	ke ai	95
+(つД`)	ku	120
+＞﹏＜	ku	120
+┬＿┬	ku	120
+･ﾟ･(ﾉД`;)･ﾟ	ku	120
+〒▽〒	ku	120
+ヽ(；▽；)ﾉ	ku	120
+(つД`)	nan guo	110
+＞﹏＜	nan guo	110
+┬＿┬	nan guo	110
+･ﾟ･(ﾉД`;)･ﾟ	nan guo	110
+〒▽〒	nan guo	110
+ヽ(；▽；)ﾉ	nan guo	110
+ˊ_>ˋ	nan guo	80
+⊙.⊙	nan guo	80
+≧▽≦	nan guo	80
+¬_¬	nan guo	80
+m(_ _)m	nan guo	80
+Θ_Θ	nan guo	80
+눈_눈	nan guo	80
+(#‵′)凸	sheng qi	120
+(￣ε(#￣)	sheng qi	120
+(╬ Ò ‸ Ó)	sheng qi	120
+（╬￣皿￣）＝○＃（￣＃）３￣）	sheng qi	120
+o(￣ヘ￣o＃)	sheng qi	120
+╮(￣▽￣)╭	tan shou	120
+╮(╯_╰)╭	tan shou	120
+（ˉ﹃ˉ）	tan shou	90
+(￣ε(#￣)	tan shou	90
+<( ￣＾￣)>	tan shou	90
+<(￣︶￣)>	tan shou	90
+o(￣ヘ￣o＃)	tan shou	90
+_(:з」∠)_	tang ping	115
+ˊㅅˋ	tang ping	115
+( ´･･)ﾉ(._.`)	tang ping	75
+( ╯-_-)╯~┴—┴	tang ping	75
+(<ゝω·)☆~	tang ping	75
+（╬￣皿￣）＝○＃（￣＃）３￣）	tang ping	75
+（T_ T(○=(＞_＜o	tang ping	75
+／人◕‿‿◕人＼	tang ping	75
+～(￣▽￣～)(～￣▽￣)～	tang ping	75
+┯━┯ノ('－'ノ)	tang ping	75
+╧═╧╰（`□′╰）	tang ping	75
+╮(￣▽￣)╭	wu nai	115
+╮(╯_╰)╭	wu nai	115
+（ˉ﹃ˉ）	wu nai	95
+(￣ε(#￣)	wu nai	95
+<( ￣＾￣)>	wu nai	95
+<(￣︶￣)>	wu nai	95
+o(￣ヘ￣o＃)	wu nai	95
+～(￣▽￣～)(～￣▽￣)～	xiao	105
+<(￣︶￣)>	xiao	105
+≧▽≦	xiao	105
+╮(￣▽￣)╭	xiao	105
+ヽ(ﾟ∀ﾟ*)ﾉ	xiao	105
+( ´･･)ﾉ(._.`)	yan wen zi	80
+( ╯-_-)╯~┴—┴	yan wen zi	80
+( ͡° ͜ʖ ͡°)✧	yan wen zi	80
+( ・ˍ・)	yan wen zi	80
+(#‵′)凸	yan wen zi	80
+(＃°Д°)	yan wen zi	80
+(*/ω＼*)	yan wen zi	80
+（ˉ﹃ˉ）	yan wen zi	80
+(￣ε(#￣)	yan wen zi	80
+(´･ω･`)	yan wen zi	80
+(<ゝω·)☆~	yan wen zi	80
+(●′ω`●)	yan wen zi	80
+(╬ Ò ‸ Ó)	yan wen zi	80
+（╬￣皿￣）＝○＃（￣＃）３￣）	yan wen zi	80
+(°⌓°;	yan wen zi	80
+(੭ु´･ω･`)੭ु⁾⁾	yan wen zi	80
+（T_ T(○=(＞_＜o	yan wen zi	80
+(ﾟДﾟ≡ﾟдﾟ)!?	yan wen zi	80
+(つ。⊂)	yan wen zi	80
+(つД`)	yan wen zi	80
+／人◕‿‿◕人＼	yan wen zi	80
+_(:з」∠)_	yan wen zi	80
+～(￣▽￣～)(～￣▽￣)～	yan wen zi	80
+ˊ_>ˋ	yan wen zi	80
+ˊㅅˋ	yan wen zi	80
+⊙.⊙	yan wen zi	80
+<( ￣＾￣)>	yan wen zi	80
+<(￣︶￣)>	yan wen zi	80
+＞﹏＜	yan wen zi	80
+∑(￣ﾛ￣||)	yan wen zi	80
+∑(ﾟдﾟ;)	yan wen zi	80
+≧▽≦	yan wen zi	80
+╮(￣▽￣)╭	yan wen zi	80
+╮(╯_╰)╭	yan wen zi	80
+┬＿┬	yan wen zi	80
+┯━┯ノ('－'ノ)	yan wen zi	80
+╧═╧╰（`□′╰）	yan wen zi	80
+¬_¬	yan wen zi	80
+･ﾟ･(ﾉД`;)･ﾟ	yan wen zi	80
+〒▽〒	yan wen zi	80
+m(_ _)m	yan wen zi	80
+o(￣ヘ￣o＃)	yan wen zi	80
+o(‵ε′)ψ	yan wen zi	80
+ζ*'ヮ')ζ	yan wen zi	80
+Θ_Θ	yan wen zi	80
+Σ(・ω・」)」	yan wen zi	80
+ლ(･ิω･ิლ)	yan wen zi	80
+눈_눈	yan wen zi	80
+ヽ(；▽；)ﾉ	yan wen zi	80
+ヽ(ﾟ∀ﾟ*)ﾉ	yan wen zi	80
+( ´･･)ﾉ(._.`)	zi shi	85
+( ╯-_-)╯~┴—┴	zi shi	85
+(<ゝω·)☆~	zi shi	85
+（╬￣皿￣）＝○＃（￣＃）３￣）	zi shi	85
+（T_ T(○=(＞_＜o	zi shi	85
+／人◕‿‿◕人＼	zi shi	85
+_(:з」∠)_	zi shi	85
+～(￣▽￣～)(～￣▽￣)～	zi shi	85
+ˊㅅˋ	zi shi	85
+┯━┯ノ('－'ノ)	zi shi	85
+╧═╧╰（`□′╰）	zi shi	85
