@@ -87,8 +87,8 @@
 ## 文件说明
 
 - `default.custom.yaml`：启用 `bopomofo_tw`
-- `bopomofo_tw.custom.yaml`：注音台湾正体补丁，加入 emoji 过滤器和颜文字符号表
-- `kaomoji_tw.schema.yaml`：隐藏辅助方案，用于让 Rime 编译颜文字注音词库
+- `bopomofo_tw.custom.yaml`：注音台湾正体补丁，使用扩展主词典，并加入 emoji 过滤器和颜文字符号表
+- `terra_pinyin_kaomoji.dict.yaml`：扩展主词典，导入原 `terra_pinyin` 和颜文字词库
 - `kaomoji_tw.dict.yaml`：按注音词触发的颜文字词库
 - `kaomoji.schema.yaml`：颜文字独立方案
 - `kaomoji.dict.yaml`：颜文字码表

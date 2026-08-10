@@ -1,0 +1,11 @@
+# Rime dictionary
+# encoding: utf-8
+---
+name: terra_pinyin_kaomoji
+version: "2026.08.10"
+sort: by_weight
+import_tables:
+  - terra_pinyin
+  - kaomoji_tw
+...
+
