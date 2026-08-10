@@ -1,80 +1,113 @@
-# window-rime-bpmf
+# trime-bpmf-mobile-themed
 
-小狼毫 / Rime 的注音台湾正体配置，基于内置 `bopomofo_tw` 方案，额外加入 emoji 候选和 kaomoji 颜文字。
+Android Trime / 同文输入法的手机注音配置，基于 Rime 内置 `bopomofo_tw` 方案和 `nopdan/danjing` 单静主题调整。
 
-> 说明：仓库名使用 `bpmf`，但当前小狼毫内置方案 ID 是 `bopomofo_tw`。因此补丁文件必须命名为 `bopomofo_tw.custom.yaml`，否则重新部署后会找不到方案，表现为只能输入拉丁字母。
+这个配置的目标是让 Trime 在手机上直接使用纯注音键盘，而不是 26 键拉丁键盘。
 
 ## 功能
 
 - 默认启用 `bopomofo_tw`
-- 为 `bopomofo_tw` 增加 emoji 候选开关
-- 在 `bopomofo_tw` 内直接用 `/happy`、`/sad` 等符号编码输入颜文字
-- 保留小狼毫外观补丁 `weasel.custom.yaml`
+- 默认输出臺灣正體字形
+- 使用单静主题，并内置适配后的手机注音键盘
+- 注音键盘按 Google 注音手机键盘风格排列
+- 禁用 `default`、`letter`、`qwertys`、`qwerty_` 的 26 键回退影响
+- 长按第一排输入数字 `1-0`
+- 长按其他注音键输入常用标点和符号
+- 底部逗号键直接输入 `，`，长按输入 `。`
+- 空格双击输入 `。`
+- 支持 emoji 候选和 `/happy`、`/sad` 等颜文字短码
 
-## 安装
-
-把仓库内文件复制到 Rime 用户目录，例如 Windows 小狼毫通常是：
-
-```text
-%APPDATA%\Rime
-```
-
-然后在小狼毫托盘菜单选择“重新部署”。
-
-## 使用
-
-### 注音输入
-
-默认方案是 `bopomofo_tw`。这个方案底层使用 Rime 的 `terra_pinyin` 词典，所以生成 `terra_pinyin.userdb` 是正常现象，不代表切到了拼音方案。
-
-### Emoji 候选
-
-在 `bopomofo_tw` 中输入中文词时，候选里会出现相关 emoji。
-
-可以通过方案选项切换：
+## 文件结构
 
 ```text
-無繪文字 / 有繪文字
+.
+├── default.custom.yaml          # Rime 全局补丁，只启用 bopomofo_tw
+├── bopomofo_tw.custom.yaml      # 注音方案补丁，默认臺灣正體、emoji、颜文字
+├── kaomoji.schema.yaml          # 颜文字独立方案
+├── kaomoji.dict.yaml            # 颜文字码表
+├── opencc/                      # emoji OpenCC 数据
+├── trime/
+│   ├── danjing.yaml             # 单静主题公共配置
+│   └── 单静.trime.yaml          # 已适配的 Trime 主题和注音键盘
+└── backgrounds/                 # 单静主题背景资源
 ```
 
-### 颜文字
+## 安装到手机
 
-不用切换方案，在 `bopomofo_tw` 中直接输入 `/` 加编码即可。
+手机需要已安装 Trime，并能通过 ADB 访问。默认 Rime 用户目录为 `/sdcard/rime`。
 
-常用编码：
+```powershell
+adb push default.custom.yaml /sdcard/rime/default.custom.yaml
+adb push bopomofo_tw.custom.yaml /sdcard/rime/bopomofo_tw.custom.yaml
+adb push kaomoji.schema.yaml /sdcard/rime/kaomoji.schema.yaml
+adb push kaomoji.dict.yaml /sdcard/rime/kaomoji.dict.yaml
+adb push opencc /sdcard/rime/opencc
+adb push trime/danjing.yaml /sdcard/rime/danjing.yaml
+adb push trime/单静.trime.yaml /sdcard/rime/单静.trime.yaml
+adb push backgrounds /sdcard/rime/backgrounds
+adb shell rm -rf /sdcard/rime/build
+adb shell am broadcast -a com.osfans.trime.deploy
+```
+
+部署后在 Trime 设置中选择主题：
 
 ```text
-/happy      开心
-/sad        难过
-/angry      生气
-/shy        害羞
-/surprise   惊讶
-/shrug      摊手
-/tableflip  掀桌
-/sleep      躺平
-/all        常用合集
-/kao        全部原始候选
+单静.trime
 ```
 
-示例：
+并选择方案：
 
 ```text
-/happy -> ≧▽≦ / ヽ(ﾟ∀ﾟ*)ﾉ / ～(￣▽￣～)(～￣▽￣)～
-/sad -> 〒▽〒 / ┬＿┬ / ＞﹏＜
+注音·臺灣正體 / bopomofo_tw
 ```
 
-## 文件说明
+## 注音键盘
 
-- `default.custom.yaml`：启用 `bopomofo_tw`
-- `bopomofo_tw.custom.yaml`：注音台湾正体补丁，加入 emoji 过滤器和颜文字符号表
-- `kaomoji.schema.yaml`：颜文字独立方案
-- `kaomoji.dict.yaml`：颜文字码表
-- `opencc/`：emoji OpenCC 转换数据
-- `weasel.custom.yaml`：小狼毫外观补丁
+主键点击仍发送 Rime `bopomofo_tw` 方案使用的注音编码；键面显示为注音符号。
 
-## 来源
+第一排长按：
 
-- emoji 配置来自 [`rime/rime-emoji`](https://github.com/rime/rime-emoji)
-- kaomoji 配置来自 GitHub Gist `Godoword/52a37d38b31d8906a844cea880dd95d4`
+```text
+1 2 3 4 5 6 7 8 9 0
+```
 
-`rime-emoji` 的许可证见 [LICENSE.rime-emoji](./LICENSE.rime-emoji)。
+第二排长按：
+
+```text
+？ ！ 、 ： ； …… —— · ~ ￥
+```
+
+第三排长按：
+
+```text
+（ ） 「 」 “ ” 《 》 〈 〉
+```
+
+第四排长按：
+
+```text
+@ # $ % & * + - = /
+```
+
+这些符号使用 Trime `commit` 直接上屏，避免和正在输入的注音编码串接。
+
+## 颜文字
+
+在注音方案内输入 `/` 加编码即可：
+
+```text
+/happy
+/sad
+/angry
+/shy
+/surprise
+/shrug
+/tableflip
+/sleep
+/all
+```
+
+## 来源和许可证
+
+- 单静主题来自 [`nopdan/danjing`](https://github.com/nopdan/danjing)，许可证见 [LICENSE.danjing](./LICENSE.danjing)。
+- emoji 配置来自 [`rime/rime-emoji`](https://github.com/rime/rime-emoji)，许可证见 [LICENSE.rime-emoji](./LICENSE.rime-emoji)。

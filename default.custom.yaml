@@ -7,4 +7,4 @@
 patch:
   schema_list:
     - {schema: bopomofo_tw}
-  "switches/@simplification/reset": 1
+  "switches/@simplification/reset": 0

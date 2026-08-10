@@ -4,4 +4,6 @@ build/
 user.yaml
 installation.yaml
 .agents/
-
+.downloads/
+.phone-backups/
+.phone-work/
