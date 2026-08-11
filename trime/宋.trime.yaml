@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 config_version: '2.5'
-name: 单静 #方案名称
+name: 宋 #方案名称
 author: '单单 <cxprcn@gmail.com>' #作者资讯
 
 conf:
@@ -36,11 +36,11 @@ conf:
   sym_bottom: 1 #底部留白
   sym_long_text_size: 20 #长标签字号
   __patch:
-    - 单静.patch.无障碍:/main?
+    - 宋.patch.无障碍:/main?
 
 style:
   __include: trime:/style
-  color_scheme: google_white #默认配色方案
+  color_scheme: ruihe_tu #默认配色方案
   horizontal: true #水平模式。改变方向键的功能 （true：方向键适配横排候选；false：方向键适配竖排候选）
   reset_ascii_mode: false #显示键盘时重置为中文状态
   inline_preedit: false #关闭应用输入框内嵌预编辑，避免多字缩小和末尾光标方框
@@ -197,397 +197,202 @@ fallback_colors:
   hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
 
 preset_color_schemes:
-  fira_light:
-    name: Fira Light
-    author: ChiesiMario
-    dark_scheme: fira_dark
-    back_color: 0xffe7e9eb
-    border_color: 0xff656565
-    candidate_separator_color: 0xffe7e9eb
-    candidate_text_color: 0xff656565
-    comment_text_color: 0xff5d5e5f
-    hilited_back_color: 0xffe7e9eb
-    hilited_candidate_back_color: 0xffe7e9eb
-    hilited_candidate_text_color: 0xff2472e1
-    hilited_comment_text_color: 0xff5d5e5f
-    hilited_key_back_color: 0xff2472e1
-    hilited_key_symbol_color: 0xffffffff
-    hilited_key_text_color: 0xffffffff
-    hilited_off_key_back_color: 0xff2472e1
-    hilited_off_key_text_color: 0xffffffff
-    hilited_text_color: 0xff656565
-    key_back_color: 0xffffffff
-    key_symbol_color: 0xff5d5e5f
-    key_text_color: 0xff656565
-    keyboard_back_color: 0xffe7e9eb
-    label_color: 0xff2472e1
-    off_key_back_color: 0xffcacdd3
-    off_key_text_color: 0xff5d5e5f
-    preview_back_color: 0xffcacdd3
-    preview_text_color: 0xff2472e1
-    text_color: 0xff2472e1
-    text_back_color: 0xffe7e9eb
-    main_back_color: 0xffffffff
-    hilited_main_back_color: 0xff2472e1
-    space_back_color: 0xffffffff
-    hilited_space_back_color: 0xff2472e1
-    off_key_symbol_color: 0xff5d5e5f
-    on_key_back_color: 0xff2472e1
-    on_key_text_color: 0xffffffff
-    hilited_on_key_back_color: 0xff2472e1
-    hilited_on_key_text_color: 0xffffffff
-    enter_back_color: 0xff2472e1
-    enter_text_color: 0xffffffff
-    enter_symbol_color: 0xffffffff
-    hilited_enter_back_color: 0xff2472e1
-    key_border_color: 0xffe7e9eb
-    shadow_color: 0xffe7e9eb
-    off_sym_back_color: 0xffcacdd3
-    off_sym_text_color: 0xff5d5e5f
-    off_sym_fy_text_color: 0xffffffff
-    hilited_off_sym_back_color: 0xff2472e1
-    hilited_off_sym_text_color: 0xffffffff
-    enter_sym_back_color: 0xff2472e1
-    enter_sym_text_color: 0xffffffff
-    hilited_enter_sym_back_color: 0xff2472e1
-    menu_back_color: 0xffcacdd3
-    menu_text_color: 0xff5d5e5f
-    hilited_menu_back_color: 0xffffffff
-    hilited_menu_text_color: 0xff2472e1
-
-  fira_dark:
-    name: Fira Dark
-    author: ChiesiMario
-    light_scheme: fira_light
-    back_color: 0xff000000
-    border_color: 0xffF1F1F1
-    candidate_separator_color: 0xff000000
-    candidate_text_color: 0xffF1F1F1
-    comment_text_color: 0xffB6B6B6
-    hilited_back_color: 0xff000000
-    hilited_candidate_back_color: 0xff000000
-    hilited_candidate_text_color: 0xff2472e1
-    hilited_comment_text_color: 0xffB6B6B6
-    hilited_key_back_color: 0xff2472e1
-    hilited_key_symbol_color: 0xff000000
-    hilited_key_text_color: 0xff000000
-    hilited_off_key_back_color: 0xff2472e1
-    hilited_off_key_text_color: 0xff000000
-    hilited_text_color: 0xffF1F1F1
-    key_back_color: 0xff393c3f
-    key_symbol_color: 0xffB6B6B6
-    key_text_color: 0xffF1F1F1
-    keyboard_back_color: 0xff000000
-    label_color: 0xff2472e1
-    off_key_back_color: 0xff676767
-    off_key_text_color: 0xffB6B6B6
-    preview_back_color: 0xff676767
-    preview_text_color: 0xff2472e1
-    text_color: 0xff2472e1
-    text_back_color: 0xff000000
-    main_back_color: 0xff393c3f
-    hilited_main_back_color: 0xff2472e1
-    space_back_color: 0xff393c3f
-    hilited_space_back_color: 0xff2472e1
-    off_key_symbol_color: 0xffB6B6B6
-    on_key_back_color: 0xff2472e1
-    on_key_text_color: 0xff000000
-    hilited_on_key_back_color: 0xff2472e1
-    hilited_on_key_text_color: 0xff000000
-    enter_back_color: 0xff2472e1
-    enter_text_color: 0xff000000
-    enter_symbol_color: 0xff000000
-    hilited_enter_back_color: 0xff2472e1
-    key_border_color: 0xff000000
-    shadow_color: 0xff000000
-    off_sym_back_color: 0xff676767
-    off_sym_text_color: 0xffB6B6B6
-    off_sym_fy_text_color: 0xff000000
-    hilited_off_sym_back_color: 0xff2472e1
-    hilited_off_sym_text_color: 0xff000000
-    enter_sym_back_color: 0xff2472e1
-    enter_sym_text_color: 0xff000000
-    hilited_enter_sym_back_color: 0xff2472e1
-    menu_back_color: 0xff676767
-    menu_text_color: 0xffB6B6B6
-    hilited_menu_back_color: 0xff393c3f
-    hilited_menu_text_color: 0xff2472e1
-
   default:
-    name: 默认 #方案名称
-    author: '单单 <cxprcn@gmail.com>' #作者资讯
-    dark_scheme: google_black
-    # 悬浮窗
-    # border_color: back_color #悬浮窗边框
-    # label_color: hilited_text_color #标签（候选序号）
-    # text_back_color: back_color #编码区背景
-    text_color: 0xFF6699 #编码 粉
-    # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0x333333 #高亮编码 黑
+    name: 瑞鹤图默认
+    author: 'Codex, palette provided by user'
+    text_color: 0xF2EDE3
+    text_back_color: 0x47665A
+    hilited_text_color: 0xF2EDE3
+    hilited_back_color: 0x47665A
+    border_color: 0x4A3D25
+    label_color: 0xF2EDE3
 
-    # 候选栏
-    # candidate_separator_color: back_color #候选分割线
-    back_color: 0xD7D9DD #候选栏背景 灰
-    # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0x808080 #提示
-    # hilited_candidate_back_color: back_color #高亮候选背景
-    # hilited_candidate_text_color: text_color #高亮候选文字
-    # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
+    back_color: 0x47665A
+    candidate_separator_color: 0x4A3D25
+    candidate_text_color: 0xF2EDE3
+    comment_text_color: 0x4A3D25
+    hilited_candidate_back_color: 0x47665A
+    hilited_candidate_text_color: 0xF2EDE3
+    hilited_comment_text_color: 0xF2EDE3
 
-    # 键盘通用
-    # keyboard_back_color: back_color #键盘背景
-    # key_border_color: border_color #按键边框
-    # shadow_color: border_color #按键文字阴影
-    # preview_back_color: back_color #按键提示背景
-    # preview_text_color: key_text_color #按键提示文字
-    # key_text_color: candidate_text_color #按键文字
-    # key_symbol_color: comment_text_color #按键符号
-    # hilited_key_text_color: key_text_color #高亮按键文字
-    # hilited_key_symbol_color: key_symbol_color #高亮按键符号
+    keyboard_back_color: 0x47665A
+    key_border_color: 0x4A3D25
+    shadow_color: 0x47665A
+    preview_back_color: 0x4A3D25
+    preview_text_color: 0xF2EDE3
+    key_text_color: 0xF2EDE3
+    key_symbol_color: 0x4A3D25
+    hilited_key_text_color: 0xF2EDE3
+    hilited_key_symbol_color: 0xF2EDE3
 
-    # 主键盘
-    main_back_color: danjing.default/key.png #按键背景 ※
-    hilited_main_back_color: danjing.default/hilited_key.png #高亮按键背景 ※
-    space_back_color: danjing.default/space.png #空格背景 ※
-    hilited_space_back_color: danjing.default/hilited_space.png #高亮空格背景 ※
-    off_key_back_color: danjing.default/off_key.png #功能键背景
-    # off_key_text_color: key_text_color #功能键文字
-    # off_key_symbol_color: off_key_text_color #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: danjing.default/hilited_off_key.png #高亮功能键背景
-    # hilited_off_key_text_color: off_key_text_color #高亮功能键文字
-    on_key_back_color: danjing.default/shift.png #shift锁定时背景
-    on_key_text_color: 0xFFFFFF #shift锁定时文字
-    hilited_on_key_back_color: danjing.default/hilited_shift.png #高亮shift锁定时背景
-    # hilited_on_key_text_color: on_key_text_color #高亮shift锁定时文字
-    enter_back_color: danjing.default/enter.png #enter背景 ※
-    enter_text_color: 0x00 #enter文字 高亮enter文字※
-    enter_symbol_color: 0xFFFFFF #enter符号 高亮enter符号※
-    hilited_enter_back_color: danjing.default/hilited_enter.png #高亮enter背景 ※
+    main_back_color: 0xA38158
+    hilited_main_back_color: 0x4A3D25
+    space_back_color: 0xA38158
+    hilited_space_back_color: 0x4A3D25
+    off_key_back_color: 0xA38158
+    off_key_text_color: 0xF2EDE3
+    off_key_symbol_color: 0x4A3D25
+    hilited_off_key_back_color: 0x4A3D25
+    hilited_off_key_text_color: 0xF2EDE3
+    on_key_back_color: 0x4A3D25
+    on_key_text_color: 0xF2EDE3
+    hilited_on_key_back_color: 0x47665A
+    hilited_on_key_text_color: 0xF2EDE3
+    enter_back_color: 0x4A3D25
+    enter_text_color: 0xF2EDE3
+    enter_symbol_color: 0xF2EDE3
+    hilited_enter_back_color: 0x47665A
 
-    # 附键盘
-    key_back_color: 0xFFFFFF #按键背景
-    # hilited_key_back_color: back_color #高亮按键背景
-    # off_sym_back_color: back_color #功能键背景 ※
-    # off_sym_text_color: off_key_text_color #功能键文字 ※
-    # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0xC1C4CD #高亮功能键背景 ※
-    # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x2090FF # enter背景 ※
-    # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0x047BD8 ##高亮enter背景 ※
-    # menu_back_color: off_sym_back_color #菜单背景 ※
-    # menu_text_color: off_sym_text_color #菜单文字 ※
-    # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
-    # hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
+    key_back_color: 0xA38158
+    hilited_key_back_color: 0x4A3D25
+    off_sym_back_color: 0xA38158
+    off_sym_text_color: 0xF2EDE3
+    off_sym_fy_text_color: 0xF2EDE3
+    hilited_off_sym_back_color: 0x4A3D25
+    hilited_off_sym_text_color: 0xF2EDE3
+    enter_sym_back_color: 0x4A3D25
+    enter_sym_text_color: 0xF2EDE3
+    hilited_enter_sym_back_color: 0x47665A
+    menu_back_color: 0xA38158
+    menu_text_color: 0xF2EDE3
+    hilited_menu_back_color: 0x4A3D25
+    hilited_menu_text_color: 0xF2EDE3
 
-  google_black:
-    name: 谷歌黑 #方案名称
-    author: '单单 <cxprcn@gmail.com>' #作者资讯
-    light_scheme: google_white
-    # 悬浮窗
-    # border_color: back_color #悬浮窗边框
-    # label_color: hilited_text_color #标签（候选序号）
-    # text_back_color: back_color #编码区背景
-    text_color: 0x8AB4F8 #编码
-    # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0xE8EAED #高亮编码
+  material_you_dark:
+    name: Material You 深色
+    author: 'Codex, based on Material Design 3 static tones'
+    light_scheme: material_you_light
+    text_color: 0xB8C9FF
+    hilited_text_color: 0xE2E2EC
+    back_color: 0x1B1B20
+    comment_text_color: 0xC6C6D0
+    hilited_candidate_text_color: 0xD7E2FF
+    keyboard_back_color: 0x1B1B20
+    key_text_color: 0xE4E2E6
+    key_symbol_color: 0xC8C5CA
+    hilited_key_text_color: 0xE4E2E6
+    main_back_color: 0x2F3036
+    hilited_main_back_color: 0x45464F
+    space_back_color: 0x2F3036
+    hilited_space_back_color: 0x45464F
+    off_key_back_color: 0x3A3B42
+    off_key_text_color: 0xE4E2E6
+    off_key_symbol_color: 0xC8C5CA
+    hilited_off_key_back_color: 0x54565F
+    hilited_off_key_text_color: 0xFFFFFF
+    on_key_back_color: 0xADC6FF
+    on_key_text_color: 0x0A305F
+    hilited_on_key_back_color: 0xD7E2FF
+    hilited_on_key_text_color: 0x001B3F
+    enter_back_color: 0xADC6FF
+    enter_text_color: 0x0A305F
+    enter_symbol_color: 0x0A305F
+    hilited_enter_back_color: 0xD7E2FF
+    key_back_color: 0x2F3036
+    hilited_key_back_color: 0x45464F
+    off_sym_back_color: 0x3A3B42
+    hilited_off_sym_back_color: 0x54565F
+    enter_sym_back_color: 0xADC6FF
+    hilited_enter_sym_back_color: 0xD7E2FF
 
-    # 候选栏
-    # candidate_separator_color: back_color #候选分割线
-    back_color: 0x202124 #候选栏背景
-    # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0x9AA0A6 #提示
-    # hilited_candidate_back_color: back_color #高亮候选背景
-    # hilited_candidate_text_color: text_color #高亮候选文字
-    # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
+  material_you_light:
+    name: Material You 浅色
+    author: 'Codex, based on Material Design 3 static tones'
+    dark_scheme: material_you_dark
+    text_color: 0x3F5F95
+    hilited_text_color: 0x1B1B1F
+    back_color: 0xF8F7FB
+    comment_text_color: 0x74777F
+    hilited_candidate_text_color: 0x1B1B1F
+    keyboard_back_color: 0xF8F7FB
+    key_text_color: 0x1B1B1F
+    key_symbol_color: 0x5F626A
+    hilited_key_text_color: 0x1B1B1F
+    main_back_color: 0xFFFFFF
+    hilited_main_back_color: 0xE8EEF9
+    space_back_color: 0xFFFFFF
+    hilited_space_back_color: 0xE8EEF9
+    off_key_back_color: 0xE1E3EA
+    off_key_text_color: 0x1B1B1F
+    off_key_symbol_color: 0x5F626A
+    hilited_off_key_back_color: 0xC5CAD3
+    hilited_off_key_text_color: 0x1B1B1F
+    on_key_back_color: 0x3F5F95
+    on_key_text_color: 0xFFFFFF
+    hilited_on_key_back_color: 0x284777
+    hilited_on_key_text_color: 0xFFFFFF
+    enter_back_color: 0x3F5F95
+    enter_text_color: 0xFFFFFF
+    enter_symbol_color: 0xFFFFFF
+    hilited_enter_back_color: 0x284777
+    key_back_color: 0xFFFFFF
+    hilited_key_back_color: 0xE8EEF9
+    off_sym_back_color: 0xE1E3EA
+    hilited_off_sym_back_color: 0xC5CAD3
+    enter_sym_back_color: 0x3F5F95
+    hilited_enter_sym_back_color: 0x284777
 
-    # 键盘通用
-    # keyboard_back_color: back_color #键盘背景
-    # key_border_color: back_color #按键边框
-    # shadow_color: back_color #按键文字阴影
-    # preview_back_color: back_color #按键提示背景
-    # preview_text_color: key_text_color #按键提示文字
-    # key_text_color: candidate_text_color #按键文字
-    # key_symbol_color: comment_text_color #按键符号
-    keyboard_back_color: 0x202124 #键盘背景
-    key_text_color: 0xE8EAED #按键文字
-    key_symbol_color: 0xBDC1C6 #按键符号
-    hilited_key_text_color: 0xE8EAED #高亮按键文字
-    # hilited_key_symbol_color: key_symbol_color #高亮按键符号
+  ruihe_tu:
+    name: 瑞鹤图
+    author: 'Codex, palette provided by user'
+    text_color: 0xF2EDE3
+    text_back_color: 0x47665A
+    hilited_text_color: 0xF2EDE3
+    hilited_back_color: 0x47665A
+    border_color: 0x4A3D25
+    label_color: 0xF2EDE3
 
-    # 主键盘
-    main_back_color: 0x303134 #按键背景 ※
-    hilited_main_back_color: 0x3C4043 #高亮按键背景 ※
-    space_back_color: 0x303134 #空格背景 ※
-    hilited_space_back_color: 0x3C4043 #高亮空格背景 ※
-    off_key_back_color: 0x3C4043 #功能键背景
-    off_key_text_color: 0xE8EAED #功能键文字
-    off_key_symbol_color: 0xBDC1C6 #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: 0x5F6368 #高亮功能键背景
-    hilited_off_key_text_color: 0xFFFFFF #高亮功能键文字
-    on_key_back_color: 0x5F6368 #shift锁定时背景
-    on_key_text_color: 0xFFFFFF #shift锁定时文字
-    hilited_on_key_back_color: 0x8AB4F8 #高亮shift锁定时背景
-    hilited_on_key_text_color: 0x202124 #高亮shift锁定时文字
-    enter_back_color: 0x8AB4F8 #enter背景 ※
-    enter_text_color: 0x202124 #enter文字 高亮enter文字※
-    enter_symbol_color: 0x202124 #enter符号 高亮enter符号※
-    hilited_enter_back_color: 0xAECBFA #高亮enter背景 ※
+    back_color: 0x47665A
+    candidate_separator_color: 0x4A3D25
+    candidate_text_color: 0xF2EDE3
+    comment_text_color: 0x4A3D25
+    hilited_candidate_back_color: 0x47665A
+    hilited_candidate_text_color: 0xF2EDE3
+    hilited_comment_text_color: 0xF2EDE3
 
-    # 附键盘
-    key_back_color: 0x303134 #按键背景
-    hilited_key_back_color: 0x3C4043 #高亮按键背景
-    off_sym_back_color: 0x3C4043 #功能键背景 ※
-    # off_sym_text_color: off_key_text_color #功能键文字 ※
-    # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0x5F6368 #高亮功能键背景 ※
-    # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x8AB4F8 # enter背景 ※
-    # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0xAECBFA #高亮enter背景 ※
-    # menu_back_color: off_sym_back_color #菜单背景 ※
-    # menu_text_color: off_sym_text_color #菜单文字 ※
-    # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
-    # hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
+    keyboard_back_color: 0x47665A
+    key_border_color: 0x4A3D25
+    shadow_color: 0x47665A
+    preview_back_color: 0x4A3D25
+    preview_text_color: 0xF2EDE3
+    key_text_color: 0xF2EDE3
+    key_symbol_color: 0x4A3D25
+    hilited_key_text_color: 0xF2EDE3
+    hilited_key_symbol_color: 0xF2EDE3
 
-  google_white:
-    name: 谷歌白
-    author: '单单 <cxprcn@gmail.com>'
-    dark_scheme: google_black
-    # 悬浮窗
-    # border_color: back_color #悬浮窗边框
-    # label_color: hilited_text_color #标签（候选序号）
-    # text_back_color: back_color #编码区背景
-    text_color: 0x1A73E8 #编码
-    # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0x3C4043 #高亮编码
+    main_back_color: 0xA38158
+    hilited_main_back_color: 0x4A3D25
+    space_back_color: 0xA38158
+    hilited_space_back_color: 0x4A3D25
+    off_key_back_color: 0xA38158
+    off_key_text_color: 0xF2EDE3
+    off_key_symbol_color: 0x4A3D25
+    hilited_off_key_back_color: 0x4A3D25
+    hilited_off_key_text_color: 0xF2EDE3
+    on_key_back_color: 0x4A3D25
+    on_key_text_color: 0xF2EDE3
+    hilited_on_key_back_color: 0x47665A
+    hilited_on_key_text_color: 0xF2EDE3
+    enter_back_color: 0x4A3D25
+    enter_text_color: 0xF2EDE3
+    enter_symbol_color: 0xF2EDE3
+    hilited_enter_back_color: 0x47665A
 
-    # 候选栏
-    # candidate_separator_color: back_color #候选分割线
-    back_color: 0xF1F3F4 #候选栏背景
-    # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0x5F6368 #提示
-    # hilited_candidate_back_color: back_color #高亮候选背景
-    hilited_candidate_text_color: 0x333333 #高亮候选文字
-    # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
+    key_back_color: 0xA38158
+    hilited_key_back_color: 0x4A3D25
+    off_sym_back_color: 0xA38158
+    off_sym_text_color: 0xF2EDE3
+    off_sym_fy_text_color: 0xF2EDE3
+    hilited_off_sym_back_color: 0x4A3D25
+    hilited_off_sym_text_color: 0xF2EDE3
+    enter_sym_back_color: 0x4A3D25
+    enter_sym_text_color: 0xF2EDE3
+    hilited_enter_sym_back_color: 0x47665A
+    menu_back_color: 0xA38158
+    menu_text_color: 0xF2EDE3
+    hilited_menu_back_color: 0x4A3D25
+    hilited_menu_text_color: 0xF2EDE3
 
-    # 键盘通用
-    # keyboard_back_color: back_color #键盘背景
-    # key_border_color: back_color #按键边框
-    # shadow_color: back_color #按键文字阴影
-    # preview_back_color: back_color #按键提示背景
-    # preview_text_color: key_text_color #按键提示文字
-    # key_text_color: candidate_text_color #按键文字
-    keyboard_back_color: 0xF1F3F4 #键盘背景
-    key_text_color: 0x202124 #按键文字
-    key_symbol_color: 0x5F6368 #按键符号
-    hilited_key_text_color: 0x202124 #高亮按键文字
-    # hilited_key_symbol_color: key_symbol_color #高亮按键符号
-
-    # 主键盘
-    main_back_color: 0xFFFFFF #按键背景 ※
-    hilited_main_back_color: 0xE8EAED #高亮按键背景 ※
-    space_back_color: 0xFFFFFF #空格背景 ※
-    hilited_space_back_color: 0xE8EAED #高亮空格背景 ※
-    off_key_back_color: 0xDADCE0 #功能键背景
-    off_key_text_color: 0x202124 #功能键文字
-    off_key_symbol_color: 0x5F6368 #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: 0xBDC1C6 #高亮功能键背景
-    hilited_off_key_text_color: 0x202124 #高亮功能键文字
-    on_key_back_color: 0x1A73E8 #shift锁定时背景
-    on_key_text_color: 0xFFFFFF #shift锁定时文字
-    hilited_on_key_back_color: 0x185ABC #高亮shift锁定时背景
-    hilited_on_key_text_color: 0xFFFFFF #高亮shift锁定时文字
-    enter_back_color: 0x1A73E8 #enter背景 ※
-    enter_text_color: 0xFFFFFF #enter文字 高亮enter文字※
-    enter_symbol_color: 0xFFFFFF #enter符号 高亮enter符号※
-    hilited_enter_back_color: 0x185ABC #高亮enter背景 ※
-
-    # 附键盘
-    key_back_color: 0xFFFFFF #按键背景
-    hilited_key_back_color: 0xE8EAED #高亮按键背景
-    off_sym_back_color: 0xDADCE0 #功能键背景 ※
-    # off_sym_text_color: off_key_text_color #功能键文字 ※
-    # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0xBDC1C6 #高亮功能键背景 ※
-    # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x1A73E8 # enter背景 ※
-    # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0x185ABC #高亮enter背景 ※
-    # menu_back_color: off_sym_back_color #菜单背景 ※
-    # menu_text_color: off_sym_text_color #菜单文字 ※
-    # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
-    # hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
-
-  pink_blue:
-    name: 粉蓝
-    author: '单单 <cxprcn@gmail.com>'
-    dark_scheme: google_black
-    # 悬浮窗
-    # border_color: back_color #悬浮窗边框
-    # label_color: hilited_text_color #标签（候选序号）
-    # text_back_color: back_color #编码区背景
-    text_color: 0x249DD6 #编码
-    # hilited_back_color: back_color #高亮编码背景
-    hilited_text_color: 0x627178 #高亮编码
-
-    # 候选栏
-    # candidate_separator_color: back_color #候选分割线
-    back_color: 0xFBE3D7 #候选栏背景
-    # candidate_text_color: hilited_text_color #候选文字
-    comment_text_color: 0x808080 #提示
-    # hilited_candidate_back_color: back_color #高亮候选背景
-    hilited_candidate_text_color: 0x333333 #高亮候选文字
-    # hilited_comment_text_color: hilited_candidate_text_color #高亮提示
-
-    # 键盘通用
-    keyboard_back_color: danjing.pink_blue/keyboard.png #键盘背景
-    # key_border_color: back_color #按键边框
-    # shadow_color: back_color #按键文字阴影
-    # preview_back_color: back_color #按键提示背景
-    # preview_text_color: key_text_color #按键提示文字
-    # key_text_color: candidate_text_color #按键文字
-    key_symbol_color: 0x627178 #按键符号
-    hilited_key_text_color: 0x333333 #高亮按键文字
-    # hilited_key_symbol_color: key_symbol_color #高亮按键符号
-
-    # 主键盘
-    main_back_color: danjing.pink_blue/key.png #按键背景 ※
-    hilited_main_back_color: danjing.pink_blue/hilited_key.png #高亮按键背景 ※
-    space_back_color: danjing.pink_blue/space.png #空格背景 ※
-    hilited_space_back_color: danjing.pink_blue/hilited_space.png #高亮空格背景 ※
-    off_key_back_color: danjing.pink_blue/off_key.png #功能键背景
-    # off_key_text_color: key_text_color #功能键文字
-    # off_key_symbol_color: off_key_text_color #功能键符号 高亮功能键符号※
-    hilited_off_key_back_color: danjing.pink_blue/hilited_off_key.png #高亮功能键背景
-    # hilited_off_key_text_color: off_key_text_color #高亮功能键文字
-    on_key_back_color: danjing.pink_blue/shift.png #shift锁定时背景
-    on_key_text_color: 0xFFFFFF #shift锁定时文字
-    hilited_on_key_back_color: danjing.pink_blue/hilited_shift.png #高亮shift锁定时背景
-    # hilited_on_key_text_color: on_key_text_color #高亮shift锁定时文字
-    # enter_back_color: on_key_back_color #enter背景 ※
-    # enter_text_color: on_key_text_color #enter文字 高亮enter文字※
-    # enter_symbol_color: enter_text_color #enter符号 高亮enter符号※
-    # hilited_enter_back_color: hilited_on_key_back_color #高亮enter背景 ※
-
-    # 附键盘
-    key_back_color: 0x50FFFFFF #按键背景
-    hilited_key_back_color: 0xBBFFFFFF #高亮按键背景
-    off_sym_back_color: 0x50FFFFFF #功能键背景 ※
-    # off_sym_text_color: off_key_text_color #功能键文字 ※
-    # off_sym_fy_text_color: hilited_off_sym_back_color #翻页停止箭头文字 高亮※
-    hilited_off_sym_back_color: 0xBBFFFFFF #高亮功能键背景 ※
-    # hilited_off_sym_text_color: hilited_off_key_text_color #高亮功能键文字 ※
-    enter_sym_back_color: 0x249DD6 # enter背景 ※
-    # enter_sym_text_color: on_key_text_color #enter文字 高亮enter文字※
-    hilited_enter_sym_back_color: 0xEEBFAC #高亮enter背景 ※
-    # menu_back_color: off_sym_back_color #菜单背景 ※
-    # menu_text_color: off_sym_text_color #菜单文字 ※
-    # hilited_menu_back_color: key_back_color #高亮菜单背景 ※
-    # hilited_menu_text_color: enter_sym_back_color #高亮菜单文字 ※
-    # sub_keyboard_background: key_back_color #键盘背景 ※
-
-# 按键样式
 styl:
   key:
     key_back_color: main_back_color
