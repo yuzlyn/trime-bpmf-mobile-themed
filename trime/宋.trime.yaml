@@ -199,7 +199,7 @@ fallback_colors:
 preset_color_schemes:
   default:
     name: 瑞鹤图默认
-    author: 'Codex, palette provided by user'
+    author: 'yuzlyn'
     text_color: 0xF2EDE3
     text_back_color: 0x47665A
     hilited_text_color: 0xF2EDE3
@@ -260,7 +260,7 @@ preset_color_schemes:
 
   material_you_dark:
     name: Material You 深色
-    author: 'Codex, based on Material Design 3 static tones'
+    author: 'yuzlyn'
     light_scheme: material_you_light
     text_color: 0xB8C9FF
     hilited_text_color: 0xE2E2EC
@@ -297,7 +297,7 @@ preset_color_schemes:
 
   material_you_light:
     name: Material You 浅色
-    author: 'Codex, based on Material Design 3 static tones'
+    author: 'yuzlyn'
     dark_scheme: material_you_dark
     text_color: 0x3F5F95
     hilited_text_color: 0x1B1B1F
@@ -334,7 +334,7 @@ preset_color_schemes:
 
   ruihe_tu:
     name: 瑞鹤图
-    author: 'Codex, palette provided by user'
+    author: 'yuzlyn'
     text_color: 0xF2EDE3
     text_back_color: 0x47665A
     hilited_text_color: 0xF2EDE3
