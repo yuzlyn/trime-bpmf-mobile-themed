@@ -1,7 +1,7 @@
 ﻿patch:
   "switches/@0/reset": 0
   "switches/@2/options": [zh_hans, zh_hant_tw]
-  "switches/@2/reset": 0
+  "switches/@2/reset": 1
   "switches/@2/states": ["简化字", "臺灣字形"]
   "switches/@next":
     name: emoji_suggestion
