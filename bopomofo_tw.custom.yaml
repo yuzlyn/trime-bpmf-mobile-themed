@@ -8,6 +8,7 @@
     reset: 1
     states: ["無繪文字", "有繪文字"]
   "engine/filters/@before 0": "simplifier@emoji_suggestion"
+  "engine/processors/@7": express_editor
   "key_binder/bindings/@24": {accept: "Control+Shift+4", toggle: zh_hant_tw, when: always}
   "key_binder/bindings/@29": {accept: "Control+Shift+dollar", toggle: zh_hant_tw, when: always}
   "engine/filters/@before 1": "simplifier@zh_tw_hint"

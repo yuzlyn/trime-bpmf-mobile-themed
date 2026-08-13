@@ -18,14 +18,14 @@ conf:
   # 底部留白
   bottom:
     keys/+:
-      - width: { __include: 宋.trime:/conf/sym_bottom_switch }
-        height: { __include: 宋.trime:/conf/sym_bottom }
+      - width: { __include: yuzlyn.trime:/conf/sym_bottom_switch }
+        height: { __include: yuzlyn.trime:/conf/sym_bottom }
 
 # 按键样式
 styl:
   # 长标签字号
   long_text_size:
-    key_text_size: { __include: 宋.trime:/conf/sym_long_text_size }
+    key_text_size: { __include: yuzlyn.trime:/conf/sym_long_text_size }
   # 功能键
   off_sym:
     width: 16 #功能键宽度
@@ -39,7 +39,7 @@ styl:
     hilited_key_text_color: hilited_off_sym_back_color
   # 底部菜单
   menu:
-    height: { __include: 宋.trime:/conf/menu_height }
+    height: { __include: yuzlyn.trime:/conf/menu_height }
     width: 12.5 #菜单宽度
     key_back_color: menu_back_color
     hilited_key_back_color: hilited_menu_back_color
